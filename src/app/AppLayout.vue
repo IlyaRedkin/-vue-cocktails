@@ -10,23 +10,20 @@
 </template>
 
 <style scoped lang="scss">
-@use './_variables.scss' as *;
-
 .app-layout {
   display: flex;
   justify-content: center;
-  min-width: $layout-min-width;
-  max-width: $layout-max-width;
-  margin: 0 auto;
+  min-width: var(--layout-min-width);
+  max-width: var(--layout-max-width);
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
 }
 .sidebar {
-  width: $sidebar-width;
-  min-width: $sidebar-min-width;
-  background: $color-bg;
-  border-right: 1px solid $color-border;
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-min-width);
+  background: var(--color-background);
+  border-right: 1px solid var(--color-border);
   padding: 24px 0 24px 0;
   box-sizing: border-box;
 }
@@ -34,9 +31,11 @@
   flex: 1;
   padding: 32px 24px;
   overflow-y: auto;
-  background: $color-main-bg;
+  background: var(--color-background);
+  width: var(--content-width);
+  min-height: var(--content-min-height);
 }
-@media (max-width: $breakpoint-mobile) {
+@media (max-width: var(--breakpoint-mobile)) {
   .app-layout {
     flex-direction: column;
     min-width: 100vw;
@@ -46,7 +45,7 @@
     width: 100vw;
     min-width: 100vw;
     border-right: none;
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid var(--color-border);
     padding: 12px 0;
   }
   .main-content {
