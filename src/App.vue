@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import AppLayout from './app/AppLayout.vue'
+import CocktailMenu from './widgets/CocktailMenu.vue'
 </script>
 
 <template>
   <AppLayout>
     <template #sidebar>
-      <!-- Здесь будет меню -->
+      <CocktailMenu />
     </template>
-    <!-- Здесь будет основной контент -->
+    <router-view />
   </AppLayout>
 </template>
 

@@ -10,7 +10,7 @@
 </template>
 
 <style scoped lang="scss">
-@import './_variables.scss';
+@use './_variables.scss' as *;
 
 .app-layout {
   display: flex;
