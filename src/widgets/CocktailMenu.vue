@@ -11,9 +11,12 @@ function goTo(code: string) {
 <template>
   <nav class="cocktail-menu">
     <ul>
-      <li v-for="item in items" :key="item.code"
-          :class="{ active: route.name === item.code }"
-          @click="goTo(item.code)">
+      <li
+        v-for="item in items"
+        :key="item.code"
+        :class="{ active: route.name === item.code }"
+        @click="goTo(item.code)"
+      >
         {{ item.name }}
       </li>
     </ul>
@@ -42,4 +45,4 @@ function goTo(code: string) {
     }
   }
 }
-</style> 
+</style>

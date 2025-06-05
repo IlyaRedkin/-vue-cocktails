@@ -31,7 +31,8 @@ for (let i = 1; i <= 15; i++) {
       <div><b>Тип:</b> {{ props.drink.strAlcoholic }}</div>
       <div><b>Бокал:</b> {{ props.drink.strGlass }}</div>
       <div><b>Инструкция:</b> {{ props.drink.strInstructions }}</div>
-      <div><b>Ингредиенты:</b>
+      <div>
+        <b>Ингредиенты:</b>
         <ul>
           <li v-for="(item, idx) in ingredients" :key="idx">
             {{ item.measure || '' }} {{ item.ingredient }}
@@ -76,4 +77,4 @@ for (let i = 1; i <= 15; i++) {
     padding-left: 18px;
   }
 }
-</style> 
+</style>

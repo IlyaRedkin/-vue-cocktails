@@ -30,7 +30,9 @@ export const useCocktailStore = defineStore('cocktail', {
       this.loading[code] = true
       this.error[code] = null
       try {
-        const res = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${code}`)
+        const res = await axios.get(
+          `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${code}`
+        )
         this.cocktails[code] = res.data.drinks || []
       } catch (e: any) {
         this.error[code] = e.message || 'Ошибка загрузки'
@@ -39,4 +41,4 @@ export const useCocktailStore = defineStore('cocktail', {
       }
     },
   },
-}) 
+})

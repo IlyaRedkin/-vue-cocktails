@@ -3,4 +3,4 @@ export const cocktails = [
   { code: 'mojito', name: 'Mojito' },
   { code: 'a1', name: 'A1' },
   { code: 'kir', name: 'Kir' },
-] as const; 
+] as const
