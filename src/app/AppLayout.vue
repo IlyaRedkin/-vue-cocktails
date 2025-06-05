@@ -1,8 +1,8 @@
 <template>
   <div class="app-layout">
-    <aside class="sidebar">
+    <Sidebar>
       <slot name="sidebar" />
-    </aside>
+    </Sidebar>
     <main class="main-content">
       <slot />
     </main>
@@ -10,10 +10,11 @@
 </template>
 
 <style scoped lang="scss">
+@use '../shared/config/variables' as variables;
+
 .app-layout {
   display: flex;
   justify-content: center;
-  min-width: var(--layout-min-width);
   max-width: var(--layout-max-width);
   width: 100%;
   height: 100vh;
@@ -35,11 +36,9 @@
   width: var(--content-width);
   min-height: var(--content-min-height);
 }
-@media (max-width: var(--breakpoint-mobile)) {
+@media (max-width: variables.$breakpoint-mobile) {
   .app-layout {
     flex-direction: column;
-    min-width: 100vw;
-    max-width: 100vw;
   }
   .sidebar {
     width: 100vw;
@@ -50,6 +49,10 @@
   }
   .main-content {
     padding: 16px 8px;
+    width: 100%;
   }
 }
 </style>
+<script setup>
+import Sidebar from '../widgets/Sidebar.vue'
+</script>

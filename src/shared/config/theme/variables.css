@@ -1,0 +1,25 @@
+:root {
+    --sidebar-width: 30%;
+    --content-width: 70%;
+    --sidebar-min-width: 140px;
+    --layout-min-width: 360px;
+    --layout-max-width: 1024px;
+
+    --color-text: #213547;
+    --color-background: #ffffff;
+    --color-border: #213547;
+    --color-link: #646cff;
+    --color-link-hover: #747bff;
+    --color-button-bg: #f9f9f9;
+    --color-button-hover-border: #646cff;
+}
+
+.dark {
+    --color-text: rgba(255, 255, 255, 0.87);
+    --color-background: #242424;
+    --color-border: rgba(255, 255, 255, 0.87);
+    --color-link: #646cff;
+    --color-link-hover: #535bf2;
+    --color-button-bg: #1a1a1a;
+    --color-button-hover-border: #646cff;
+}
