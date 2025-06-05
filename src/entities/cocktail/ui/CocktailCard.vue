@@ -5,12 +5,18 @@ interface Props {
 const props = defineProps<Props>()
 
 // Собираем ингредиенты и меры
-const ingredients = []
-for (let i = 1; i <= 15; i++) {
+const ingredients: Array<{ ingredient: string; measure: string }> = []
+let i = 1
+let isIngredientHasData = true
+
+while (isIngredientHasData) {
   const ingredient = props.drink[`strIngredient${i}`]
   const measure = props.drink[`strMeasure${i}`]
   if (ingredient) {
     ingredients.push({ ingredient, measure })
+    i += 1
+  } else {
+    isIngredientHasData = false
   }
 }
 </script>
