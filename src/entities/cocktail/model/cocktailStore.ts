@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import axios from 'axios'
 
-interface Drink {
+export interface Drink {
   idDrink: string
   strDrink: string
   strCategory: string

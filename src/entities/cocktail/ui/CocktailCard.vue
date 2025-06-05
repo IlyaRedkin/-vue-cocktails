@@ -1,11 +1,14 @@
 <script setup lang="ts">
+import type { Drink } from '../model/cocktailStore.ts'
+
+type Ingredient = { ingredient: string; measure: string }
 interface Props {
-  drink: Record<string, any>
+  drink: Drink
 }
 const props = defineProps<Props>()
 
 // Собираем ингредиенты и меры
-const ingredients: Array<{ ingredient: string; measure: string }> = []
+const ingredients: Array<Ingredient> = []
 let i = 1
 let isIngredientHasData = true
 
