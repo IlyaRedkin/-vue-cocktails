@@ -1,5 +1,28 @@
-# Vue 3 + TypeScript + Vite
+# Vue Cocktails
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Приложение для просмотра коктейлей по категориям с использованием данных с API [TheCocktailDB](https://www.thecocktaildb.com/api.php).
+Развернуто и доступно по адресу:
+https://vue-cocktails-black.vercel.app
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Описание проекта
+
+Это SPA-приложение на Vue 3 + TypeScript, реализующее вывод списка коктейлей по категориям (margarita, mojito, a1, kir), полученных через API. Для каждой категории выводятся все коктейли из API.  
+
+## Технологии и стек
+
+- Vue 3 + TypeScript
+- Vite (сборщик и дев-сервер)
+- Pinia (менеджер состояния)
+- ESLint + Prettier (линтинг и форматирование)
+- SCSS (стили)
+- Адаптивная верстка (под Chrome, Safari)
+- Unit-тесты на Vitest
+- Husky для pre-commit хуков
+
+## Запуск проекта
+
+Клонируйте репозиторий и установите зависимости:
+```bash
+npm install
+npm run dev
+```
